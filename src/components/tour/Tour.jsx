@@ -1,17 +1,14 @@
 import React from 'react'
+import Tours from './tours/Tours'
 
 let Tour =({data})=>{
      return(
     <>
     {
-    data.map(city =>{
-        console.log(city.id)
+    data.map((city,index) =>{
+        
         return(
-            <div key={city.id}>
-      <h2>{city.name}</h2>
-        <img src={city.image} alt="" />
-            </div>
-       
+       <Tours key={index} city={city} />
 
         )
        
